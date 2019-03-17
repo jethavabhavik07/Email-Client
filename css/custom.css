@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+.menu{
+    width: 100vw;
+    height: 8vh;
+    background: rgb(224, 224, 224);
+    padding-top: 1%;
+    padding-bottom: 0%;
+}
+.search-button{
+    margin-top: 0.28%;
+    padding: 0.2% !important;
+    text-align: center !important;
+}
+input[type="text"], textarea{
+    border-radius: 1vh;
+    width: 30%;
+    margin-left: 2%;
+    outline: none;
+}
+.mail-container{
+    position: absolute;
+    width: 100vw;
+    height: 92vh;
+    clear: all;
+}
+.options{
+    /* position: relative; */
+    width: 17vw;
+    height: 92vh;
+    background: #0072c6 ;
+    float: left;
+}
+.mails{
+    /* position: relative; */
+    width: 33vw;
+    height: 92vh;
+    background: lavenderblush;
+    float: left;
+    overflow-y: scroll;
+}
+.mails-display{
+    position: relative;
+    width: 50vw;
+    height: 92vh;
+    float: right;
+    overflow-y: scroll;
+}
+.options ul{
+    padding-top: 1vh;
+}
+.options li{
+    padding: 1vh;
+}
+.menu-button{
+    width: 15vw !important;
+    text-align: left !important;
+    padding: 3%;
+    border-radius: 3vh;
+    cursor: pointer;
+    outline: none;
+    border-style: solid;
+    transition: all 0.5s ease;
+    background-color: white;
+    font-size: medium;
+}
+.menu-button:hover{
+    border: 2px solid black;
+}
+
+/****** compose mail css *******/
+
+.to-compose, textarea{
+    width: 50vw !important;
+}
+table{
+    width: 80%;
+}
+table td{
+    padding: 1%;
+}
+input[type="submit"]{
+    padding: 1% !important;
+}

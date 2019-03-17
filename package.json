@@ -1,0 +1,18 @@
+{
+  "name": "shoppinglist",
+  "version": "1.0.0",
+  "description": "shooping list desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "bhavik jethava",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^4.1.0",
+    "gmail-send": "^1.2.14",
+    "imap": "^0.8.19",
+    "mailparser": "^2.5.0",
+    "nodemailer": "^5.1.1"
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Infinix Mail</title>
+        <link href="css/custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <script src="main.js"></script>
+        <script src="fetchEmails.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="menu">
+                <input type="text" name="search" placeholder="Search emails...">
+                <button class="menu-button search-button" style="text-align: center !important"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="mail-container">
+                <div class="options">
+                    <ul>
+                        <li><button class="menu-button" id="inbox" onclick="openMails();"><i class="fas fa-envelope-open"></i> Inbox</button></li>
+                        <li><button class="menu-button"><i class="fas fa-pencil-alt"></i> Drafts</button></li>
+                        <li><button class="menu-button"><i class="fab fa-telegram-plane"></i> Sent</button></li>
+                    </ul>
+                </div>
+                <div class="mails" id="mails"></div>
+                <div class="mails-display" id="mails-display"></div>
+            </div>
+        </div>
+    </body>
+</html>

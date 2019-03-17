@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Compose new email</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css">
+</head>
+<body>
+    <div class="container-compose">
+        <form>
+            <table>
+                <tr>
+                    <td>To: </td>
+                    <td><input type="text" id="to" name="to-email" class="to-compose" ></td>
+                </tr>
+                <tr>
+                  
+                <tr>
+                    <td>Subject: </td>
+                    <td><input type="text" id="subject" name="subject" class="to-compose"></td>
+                </tr>
+                <tr>
+                    <td>Attach files: </td>
+                    <td><input type="file" name="attachment" class="to-compose" style="margin: 1% 0 0 2%;"></td>
+                </tr>
+                <tr>
+                    <td>Your message:</td>
+                    <td>
+                        <br>
+                        <textarea id="message" name="message" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <center>
+                            <button type="submit" class="menu-button" style="text-align: center !important">Submit</button>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        const electron = require('electron');
+        const {ipcRenderer} = electron;
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit',submitform);
+        
+        function submitform(e){
+            e.preventDefault();
+            process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+            
+            var credentials = require('./credentials.json');
+
+            //var send = require('gmail-send')({
+            require('./index.js')({
+            user: credentials.user,           // Your GMail account used to send emails
+            pass: credentials.pass,           // Application-specific password
+            to: document.getElementById('to').value,           // Send to yourself
+            // to: credentials.user,
+            cc: document.getElementById('cc').value,
+            bcc: document.getElementById('bcc').value,
+            //you can also add cc and bcc
+            subject: document.getElementById('subject').value,
+            text: document.getElementById('message').value // Plain text
+            })({});  
+            
+            const user1 = credentials.user;
+            const pass1 = credentials.pass;
+            
+            const subject1 = document.getElementById('subject').value;
+            const  text1= document.getElementById('message').value;
+            
+            alert("Mail sent successfully.");
+
+            ipcRenderer.send('mail:send',[user1, pass1, to1, cc1, bcc1, subject1, text1]);
+        }
+
+        function reply_mails(){
+            var credentials = require('./credentials.json');
+
+            //var send = require('gmail-send')({
+            require('./index.js')({
+            user: credentials.user,           // Your GMail account used to send emails
+            pass: credentials.pass,           // Application-specific password
+            to: document.getElementById('from').value,           // Send to yourself
+            // to: credentials.user,
+           
+            
+            //you can also add cc and bcc
+            subject: document.getElementById('subject').value,
+            text: document.getElementById('message').value // Plain text
+            })({});  
+
+            const user1 = credentials.user;
+            const pass1 = credentials.pass;
+            const to1 = document.getElementById('to').value;
+           
+            const subject1 ='Reply :'+document.getElementById('subject').value;
+            const  text1= document.getElementById('message').value;
+
+            alert("Mail reply successfully.");
+
+            ipcRenderer.send('mail:send',[user1, pass1, to1,subject1, text1]);
+
+        }
+    </script>
+</body>
+</html>
