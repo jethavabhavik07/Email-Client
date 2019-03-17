@@ -12,6 +12,7 @@ Email client made using Electron JS for frontend and backend with node js fetchi
 * Inbox Listing from IMAP server of all emails
 * Compose Email
 * Send email with cc,bcc with attachments
+* Read Mails are marked "Yellow"
 
 ## Screenshots
 * Inbox
