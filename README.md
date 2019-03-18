@@ -32,9 +32,11 @@ Email client made using Electron JS for frontend and backend with node js for fe
 <img src="Screenshots/SuccessMessage.png">
 
 
-## Credits
+## Recognition
 
-<a href ="https://github.com/MumbaiHackathon"> Mumbai Hackathon </a>
+This project was done under ```24 hours``` in <a href ="https://github.com/MumbaiHackathon"> Mumbai Hackathon 2019</a> :smile:
+
+
 
 ## Contributors
 
@@ -47,6 +49,9 @@ Email client made using Electron JS for frontend and backend with node js for fe
 <a href = "https://github.com/mayur124"> @Mayur Chawda </a>
 
 <a href = "https://github.com/Asingh1248"> @Animesh Singh </a>
+
+#####
+with Open Source :heart:
 
 
 
