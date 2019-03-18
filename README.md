@@ -1,7 +1,7 @@
 # Email-Client
 ### Opensource project as a part of Mumbai Hackathon 2019
 
-Email client made using Electron JS for frontend and backend with node js fetching of email from IMAP server and sending email using SMTP with MIME data.
+Email client made using Electron JS for frontend and backend with node js for fetching of email from IMAP server and sending email using SMTP along with MIME data.
 
 ## Challenges
 * Parsing of raw email to normal text
@@ -30,3 +30,24 @@ Email client made using Electron JS for frontend and backend with node js fetchi
 * Sent Mail Confirmation
 
 <img src="Screenshots/SuccessMessage.png">
+
+
+## Credits
+
+<a href ="https://github.com/MumbaiHackathon"> Mumbai Hackathon </a>
+
+## Contributors
+
+<a href = "https://github.com/jethavabhavik07"> @Bhavik Jethava </a>
+
+<a href = "https://github.com/ssvas1997"> @Srinivas Subramani </a>
+
+<a href = "https://github.com/joshiadvait8"> @Advait Joshi </a>
+
+<a href = "https://github.com/mayur124"> @Mayur Chawda </a>
+
+<a href = "https://github.com/Asingh1248"> @Animesh Singh </a>
+
+
+
+
